@@ -1,6 +1,6 @@
 # Sorting Transformers Research Scaffold
 
-This repository extends the original sorting transformer scaffold into a research-ready codebase for comparing positional and architectural variants, evaluating length generalization, and running interpretability probes.
+Train a transformers model to sort integer sequences. This obviously does not works and is made only for fun and research. If anyone can make this work faster than any serious sorting algorithm, I'll make them chocolat chips cookies.
 
 ## Quickstart
 
