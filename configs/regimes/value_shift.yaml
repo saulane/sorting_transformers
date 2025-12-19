@@ -1,0 +1,9 @@
+dataset:
+  regime: value_shift
+  allow_duplicates: true
+  train_value_min: 0
+  train_value_max: 15
+  test_value_min: 0
+  test_value_max: 31
+  train_lengths: [8, 16]
+  test_lengths: [8, 16, 32]

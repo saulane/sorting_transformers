@@ -1,0 +1,50 @@
+seed: 1337
+device: auto
+output_dir: runs
+run_name: default
+
+pad_token_id: 0
+bos_token_id: 1
+eos_token_id: 2
+
+dataset:
+  regime: unique
+  train_lengths: [8, 16]
+  test_lengths: [32, 64]
+  train_value_min: 0
+  train_value_max: 31
+  test_value_min: 0
+  test_value_max: 31
+  allow_duplicates: false
+  vocab_offset: 3
+  n_train_examples: 100000
+  n_val_examples: 2000
+  n_test_examples: 2000
+  train_tokens_budget: null
+
+model:
+  variant: baseline_absolute
+  d_model: 128
+  n_layers: 4
+  n_heads: 4
+  d_ff: 256
+  dropout: 0.1
+  positional: absolute
+  tie_attention: false
+  comparison_normalize: false
+
+train:
+  batch_size: 128
+  lr: 3.0e-4
+  weight_decay: 0.0
+  max_steps: 20000
+  epochs: null
+  tokens_budget: null
+  grad_clip: 1.0
+  eval_every: 500
+  ckpt_every: 2000
+  amp: false
+
+logging:
+  save_csv: true
+  save_json: true
